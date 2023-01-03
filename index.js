@@ -18,7 +18,7 @@ if (apiToken === undefined) {
 }
 // Express/Bot server port
 const port = process.env.PORT || 80;
-const sizeLimit = 500; // allowed file size to upload
+const sizeLimit = 1074406945; // allowed file size to upload
 const bot = new Telegraf(apiToken);
 
 // Bot Config
