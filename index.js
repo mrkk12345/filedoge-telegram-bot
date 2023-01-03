@@ -8,7 +8,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 // directory to store temproray files
-const tempDir = process.env.NODE_ENV === "production" ? "/tmp" : "./tmp";
+const tempDir = process.env.NODE_ENV === "production" ? "/tmp" : "/tmp";
 // Telegram bot token
 const apiToken = process.env.TELEGRAM_TOKEN;
 const serverUrl = process.env.BOT_SERVER_URL;
