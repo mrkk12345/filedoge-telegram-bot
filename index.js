@@ -40,7 +40,10 @@ async function fileDownloader(url, fileName) {
   const writer = fs.createWriteStream(outputLocationPath);
 
   let doneDownloading = false;
-  await axios
+  await axios({
+  maxContentLength: Infinity,
+  maxBodyLength: Infinity,
+  })
     .get(url, { responseType: "stream" })
     .then((response) => {
       return new Promise((resolve, reject) => {
