@@ -42,7 +42,7 @@ async function fileDownloader(url, fileName) {
   let doneDownloading = false;
   await axios({
   maxContentLength: Infinity,
-  maxBodyLength: Infinity,
+  maxBodyLength: Infinity
   })
     .get(url, { responseType: "stream" })
     .then((response) => {
