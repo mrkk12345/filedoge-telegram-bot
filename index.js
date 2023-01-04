@@ -44,8 +44,11 @@ async function fileDownloader(url, fileName) {
 
 
 
+
     .get(url, { responseType: "stream" })
     .then((response) => {
+    response.maxContentLength = Infinity;
+    response.maxBodyLength = Infinity;
       return new Promise((resolve, reject) => {
         response.data.pipe(writer);
         let error = null;
